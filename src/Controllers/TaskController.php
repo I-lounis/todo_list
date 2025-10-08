@@ -20,8 +20,22 @@ class TaskController extends AbstractController
             if(empty($this->arrayError)){
                 $task = new Task(null, $title, $description, null);
                 $task->addTask();
+                $this->redirectToRoute('/', 200);
             }
         }
         require_once(__DIR__ . "/../Views/addTask.view.php");
     }
+
+
+    public function task()
+    {
+            if(isset($_GET['id'])){
+            $id = htmlspecialchars($_GET['id']);
+            $list = new Task($id, null, null, null);
+            $myList = $list->getTaskById();
+
+            require_once(__DIR__ . "/../Views/editTask.view.php");
+        }
+    }
+
 }

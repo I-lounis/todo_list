@@ -29,6 +29,24 @@ class Task
     }
 
 
+
+
+       public function getTaskById()
+    {
+        $pdo = Database::getConnection();
+        $sql = "SELECT `id_todos`, `title`, `description`, `status`
+        FROM `todos` WHERE `id_todos`= ?";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$this->id_todos]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if($result){
+            return new Task($result['id_todos'], $result["title"],$result["description"],$result["status"]);
+        }else{
+            return false;
+        }
+
+    }
+
     // Les get :
 
     public function getIdTask(): ?int
