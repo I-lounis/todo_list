@@ -19,26 +19,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <?php
-          if(isset($_SESSION['user'])){?>
             <li class="nav-item">
-            <a class="nav-link" href="/ajoutCommit">Ajoute une tâche</a>
+            <a class="nav-link" href="/ajoutTache">Ajouter une tâche</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/deconnexion">Se déconnecter</a>
-          </li>
-        <?php
-          } else {
-        ?>
-          <li class="nav-item">
-            <a class="nav-link" href="/inscription">S'inscrire</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/connexion">Se connecter</a>
-          </li>
-        <?php
-        }
-        ?>
       </ul>
     </div>
   </div>
