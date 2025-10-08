@@ -6,5 +6,6 @@ use Config\Router;
 $router = new Router;
 
 $router->addRoute('/', 'HomeController', 'index');
+$router->addRoute('/ajoutTache', 'TaskController', 'addTask');
 
 $router->handleRequest();
