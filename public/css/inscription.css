@@ -1,0 +1,35 @@
+form{
+    text-align: center;
+    padding-top: 300px;
+    background: linear-gradient(45deg,transparent 34%, goldenrod 35%, white 40%, transparent 41%, transparent 59%, black  60%, goldenrod 65%, transparent 66%),linear-gradient(135deg,transparent 34%, black 35%, goldenrod 40%, transparent 41%, transparent 59%, black  60%, goldenrod 65%, transparent 66%), radial-gradient(red 10%, transparent 11%), radial-gradient(circle at left,turquoise 5%, transparent 6%), radial-gradient(circle at right,turquoise 5%, transparent 6%), radial-gradient(circle at top,blueviolet 5%, transparent 6%), radial-gradient(circle at bottom,blueviolet 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #ffffff;
+    opacity: 1
+}
+
+
+label,button {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+
+div {
+    text-align: center;
+}
+
+
+footer { 
+    background: linear-gradient(45deg,transparent 34%, goldenrod 35%, white 40%, transparent 41%, transparent 59%, black  60%, goldenrod 65%, transparent 66%),linear-gradient(135deg,transparent 34%, black 35%, goldenrod 40%, transparent 41%, transparent 59%, black  60%, goldenrod 65%, transparent 66%), radial-gradient(red 10%, transparent 11%), radial-gradient(circle at left,turquoise 5%, transparent 6%), radial-gradient(circle at right,turquoise 5%, transparent 6%), radial-gradient(circle at top,blueviolet 5%, transparent 6%), radial-gradient(circle at bottom,blueviolet 5%, transparent 6%);
+    background-size: 3em 3em;
+    background-color: #ffffff;
+    opacity: 1 ;
+    margin-top: 40px;
+    padding: 60px;
+    text-align: center;
+    
+}
+
+

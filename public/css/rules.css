@@ -1,0 +1,18 @@
+body { 
+    background-color: paleturquoise;
+}
+
+h1 { 
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: center;
+    font-size: xx-large;
+}
+
+button {
+  background-color: paleturquoise;
+  color: sienna;
+}

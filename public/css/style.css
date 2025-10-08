@@ -1,0 +1,105 @@
+h1,h2 {
+    text-transform: uppercase;
+    color: goldenrod;
+    text-align: center;
+}
+
+footer h3 , header h3 {
+    color: sienna;
+}
+
+ summary{
+    text-transform: uppercase;
+    color:darkcyan;
+    text-align: center;
+    align-items: center;
+    
+}
+
+
+
+ dt{
+    color: red;
+    text-align: center;
+    align-items: center;
+}
+
+.second-layer img {
+    display: block;
+    margin: auto;
+    width: 50%;
+
+}
+
+
+main, *div { 
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(2,auto);
+}
+
+header { 
+    text-align: center;
+    background-color: paleturquoise;
+    text-transform: uppercase;
+}
+
+
+footer {
+    text-align: center;
+    background-color: paleturquoise;
+    padding: 70px;
+    border-radius: 40px;
+    border-style: dotted double dotted;
+    margin-top: 50px;
+    text-transform: uppercase;
+}
+
+.third-layer { 
+    width: 100%;
+    text-transform: uppercase;
+    font-size: large;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3,auto);
+    text-align: center;
+}
+
+.third-layer img {
+    width: 50%;
+}
+
+.third-layer p {
+    font-family: large;
+    color: sienna;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:sienna;
+}
+
+ul li {
+  float: left;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+summary{
+    list-style-type: "🡅🡇";
+
+}
