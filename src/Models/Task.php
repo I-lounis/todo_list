@@ -47,6 +47,28 @@ class Task
 
     }
 
+      public function getAllTask()
+    {
+        $pdo = Database::getConnection();
+        $sql = "SELECT `id_todos`, `title`, `description`, `status`
+        FROM `todos`";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+        //On créer un tableau vide
+        $tasks = [];
+        //Je boucle sur mon tableau de resultat pour créer un nouvel objet de chaque resultat
+        foreach($result as $row){
+            //Je créer un nouvel objet
+            $task = new Task($row['id_todos'], $row['title'], $row['description'], $row['status']);
+            //Je l'insert dans mon tableau
+            $tasks[] = $task;
+        }
+        return $tasks;
+    }
+
     // Les get :
 
     public function getIdTask(): ?int
