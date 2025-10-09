@@ -1,0 +1,56 @@
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+th[scope="col"] {
+  background-color: paleturquoise;
+  color: sienna;
+}
+
+th[scope="row"] {
+  background-color: sienna;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(even) {
+  background-color: paleturquoise;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid sienna;
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+}
+
+
+table th  {
+  color: paleturquoise;
+}
+
+table td  {
+  background-color: sienna;
+}
+
+table .price {
+  color: paleturquoise;
+}
+
+button {
+  background-color: paleturquoise;
+  color: sienna;
+}
+
+body { margin-left: 35%;}
