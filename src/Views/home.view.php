@@ -1,7 +1,7 @@
 <?php
 require_once(__DIR__ . "/partials/head.view.php");
 ?>
-<h1>Votre tâche</h1>
+<h1>Vos tâches</h1>
         <?php
         if(isset($tasks)){
             foreach($tasks as $task)

@@ -65,7 +65,7 @@ class TaskController extends AbstractController
         */
 
 
-     public function editTask()
+    public function editTask()
     {
         if(isset($_GET['id'])){
             $id = htmlspecialchars($_GET['id']);
@@ -90,5 +90,20 @@ class TaskController extends AbstractController
             $this->redirectToRoute('/', 302);
         }
         
+    }
+
+    public function deleteTask()
+    {
+        if(isset($_POST['delete'])){
+            $id = htmlspecialchars($_POST['id']);
+            $list = new Task($id, null, null, null);
+            $myList = $list->getTaskById();
+            if($myList){
+                $myList->deleteTask();
+                $this->redirectToRoute('/', 200);
+            }
+                
+        }
+
     }
 }

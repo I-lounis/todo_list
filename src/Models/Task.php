@@ -77,6 +77,15 @@ class Task
         return $stmt->execute([$this->title, $this->description, $this->id_todos]);
     }
 
+
+    public function deleteTask()
+    {
+        $pdo = Database::getConnection();
+        $sql = "DELETE FROM `todos` WHERE `id_todos` = ?";
+        $stmt = $pdo->prepare($sql);
+        return $stmt->execute([$this->id_todos]);
+    }
+
     // Les get :
 
     public function getIdTask(): ?int
