@@ -69,6 +69,14 @@ class Task
         return $tasks;
     }
 
+    public function editTask()
+    {
+        $pdo = Database::getConnection();
+        $sql = "UPDATE `todos` SET `title` = ?, `description` = ? WHERE `id_todos` = ?";
+        $stmt = $pdo->prepare($sql);
+        return $stmt->execute([$this->title, $this->description, $this->id_todos]);
+    }
+
     // Les get :
 
     public function getIdTask(): ?int

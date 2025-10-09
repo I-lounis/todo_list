@@ -38,4 +38,57 @@ class TaskController extends AbstractController
         }
     }
 
+
+      /* public function editTask()
+    {
+        if(isset($_GET['id'])){
+            $id = htmlspecialchars($_GET['id']);
+            $list = new Task($id, null, null, null);
+            $myList = $list->getTaskById();
+
+             if(isset($_POST['editTask'])){
+                    $title = htmlspecialchars($_POST['title']);
+                    $description = htmlspecialchars($_POST['description']);
+                    $this->totalCheck('title', $title);
+                    $this->totalCheck('description', $description);
+
+                    if(empty($this->arrayError)){
+                        $updateTask = new Task($id, $title, $description, null);
+                        $updateTask->editTask();
+                        $this->redirectToRoute('/tache?id =' .$id , 200);
+                    }
+                }
+
+            require_once(__DIR__ . "/../Views/editTask.view.php");
+        }
+    }
+        */
+
+
+     public function editTask()
+    {
+        if(isset($_GET['id'])){
+            $id = htmlspecialchars($_GET['id']);
+            $list = new Task($id, null, null, null);
+            $myList = $list->getTaskById();
+            
+            
+                if(isset($_POST['editTask'])){
+                    $title = htmlspecialchars($_POST['title']);
+                    $description = htmlspecialchars($_POST['description']);
+                    $this->totalCheck('title', $title);
+                    $this->totalCheck('description', $description);
+
+                    if(empty($this->arrayError)){
+                        $updateTask = new Task($id, $title, $description, null);
+                        $updateTask->editTask();
+                        $this->redirectToRoute('/tache?id='.$id , 200);
+                    }
+                }
+                 require_once(__DIR__ . "/../Views/editTask.view.php");
+        }else{
+            $this->redirectToRoute('/', 302);
+        }
+        
+    }
 }

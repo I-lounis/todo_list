@@ -18,6 +18,7 @@ require_once(__DIR__ . "/partials/head.view.php");
                             </blockquote>
                         </figure>
                     </div>
+                    <a class="nav-link" href="/tache?id=<?= $task->getIdTask() ?>" >Voir +</a>
                     <div>
                         
                     </div>
@@ -25,6 +26,8 @@ require_once(__DIR__ . "/partials/head.view.php");
             }
         }
     ?>
+    </div>
 </div>
+</details>
 <?php
 require_once(__DIR__ . "/partials/footer.view.php");
